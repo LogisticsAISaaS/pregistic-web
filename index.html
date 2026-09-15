@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pregistic — the prediction market for global trade</title>
+<meta name="description" content="Freight rates, chokepoints, ports and tariffs as dated, settleable contracts. Built by Chainova Technology Limited on DEXBuilder infrastructure, Hong Kong.">
+<link rel="canonical" href="https://pregistic.com/">
+<meta name="theme-color" content="#0B1220" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F2EFE7" media="(prefers-color-scheme: light)">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pregistic">
+<meta property="og:title" content="Pregistic — the prediction market for global trade">
+<meta property="og:description" content="Freight rates, chokepoints, ports and tariffs as dated, settleable contracts. Tickets from US$1. No ISDA, no clearing broker, no 10-FEU lot.">
+<meta property="og:url" content="https://pregistic.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pregistic — the prediction market for global trade">
+<meta name="twitter:description" content="Freight rates, chokepoints, ports and tariffs as dated, settleable contracts.">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Archivo:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+TC:wght@300;400;500&family=Noto+Serif+TC:wght@500;600&display=swap">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main" data-t="nav.skipToContent">Skip to content</a>
+
+<!-- live board rail -------------------------------------------------------->
+<div class="ticker" id="ticker">
+  <div class="track" id="tickerTrack"></div>
+</div>
+
+<!-- masthead --------------------------------------------------------------->
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#/" aria-label="Pregistic — home">
+      <svg class="mark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 1.6 22.4 12 12 22.4 1.6 12 12 1.6Z" stroke="var(--gold)" stroke-width="1.3" fill="none"/>
+        <path d="M12 6.6 17.4 12 12 17.4 6.6 12 12 6.6Z" fill="var(--gold-wash)" stroke="none"/>
+        <path d="M4.4 12h15.2" stroke="var(--gold)" stroke-width="1.1" fill="none"/>
+        <circle cx="12" cy="12" r="2.1" fill="var(--gold)"/>
+      </svg>
+      <span>
+        <span class="nm">Pregistic</span>
+        <span class="sub" data-t="brand.tagline">Price the risk of moving cargo</span>
+      </span>
+    </a>
+
+    <nav class="navlinks is-main" id="navMain" aria-label="Main">
+      <a class="navbtn" href="#/markets" data-route="markets" data-t="nav.markets">Markets</a>
+      <a class="navbtn" href="#/how" data-route="how" data-t="nav.how">How it settles</a>
+      <a class="navbtn" href="#/curve" data-route="curve" data-t="nav.curve">The Curve</a>
+      <a class="navbtn" href="#/about" data-route="about" data-t="nav.about">About</a>
+    </nav>
+
+    <div class="navlinks">
+      <button class="navbtn" id="langBtn" type="button" aria-label="Switch language">繁中</button>
+      <button class="navbtn is-icon" id="themeBtn" type="button" aria-label="Switch theme">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="5" fill="currentColor"/>
+          <path d="M12 1v3M12 20v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1 12h3M20 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"
+                stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+        </svg>
+      </button>
+      <button class="navbtn is-icon menu" id="menuBtn" type="button"
+              aria-expanded="false" aria-controls="navMain" aria-label="Menu">
+        <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" fill="none"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- routed view ------------------------------------------------------------>
+<main id="main"></main>
+
+<!-- footer ----------------------------------------------------------------->
+<footer class="footer">
+  <div class="wrap">
+    <div class="grid4" style="gap:28px">
+      <div>
+        <div class="row" style="gap:9px;margin-bottom:12px">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 1.6 22.4 12 12 22.4 1.6 12 12 1.6Z" stroke="var(--gold)" stroke-width="1.3" fill="none"/>
+            <circle cx="12" cy="12" r="2.1" fill="var(--gold)"/>
+          </svg>
+          <span class="display" style="font-size:17px;font-weight:600">Pregistic</span>
+        </div>
+        <p class="tiny" style="max-width:32ch" data-t="footer.builtBy">
+          Built by Chainova Technology Limited · Hong Kong · chainovahk.com
+        </p>
+        <p class="tiny" style="margin-top:10px">pregistic.com</p>
+      </div>
+      <div>
+        <h4 data-t="footer.product">Product</h4>
+        <a href="#/markets" data-t="nav.markets">Markets</a>
+        <a href="#/how" data-t="nav.how">How it settles</a>
+        <a href="#/curve" data-t="nav.curve">The Curve</a>
+      </div>
+      <div>
+        <h4 data-t="footer.company">Company</h4>
+        <a href="#/about" data-t="nav.about">About</a>
+        <a href="#/about" data-t="footer.contact">Contact</a>
+      </div>
+      <div>
+        <h4 data-t="footer.legal">Legal</h4>
+        <a href="#/legal" data-t="nav.legal">Terms, risk &amp; privacy</a>
+      </div>
+    </div>
+    <hr class="rule" style="margin:30px 0 18px">
+    <p class="tiny" id="footNote" style="max-width:96ch"></p>
+  </div>
+</footer>
+
+<script src="/js/i18n.js"></script>
+<script src="/js/contracts.freight.js"></script>
+<script src="/js/contracts.chokepoint.js"></script>
+<script src="/js/contracts.policy.js"></script>
+<script src="/js/contracts.air.js"></script>
+<script src="/js/content.home.js"></script>
+<script src="/js/content.how.js"></script>
+<script src="/js/content.curve.js"></script>
+<script src="/js/content.about.js"></script>
+<script src="/js/sim.js"></script>
+<script src="/js/chart.js"></script>
+<script src="/js/pages.js"></script>
+<script src="/js/markets.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>
