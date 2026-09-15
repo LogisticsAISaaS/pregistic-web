@@ -38,14 +38,36 @@
       ]
     }
   ],
-  "rewrites": [
+  "redirects": [
     {
-      "source": "/(markets|how|curve|investors|about|legal)",
-      "destination": "/index.html"
+      "source": "/markets",
+      "destination": "/#/markets",
+      "permanent": false
+    },
+    {
+      "source": "/how",
+      "destination": "/#/how",
+      "permanent": false
+    },
+    {
+      "source": "/curve",
+      "destination": "/#/curve",
+      "permanent": false
+    },
+    {
+      "source": "/about",
+      "destination": "/#/about",
+      "permanent": false
+    },
+    {
+      "source": "/legal",
+      "destination": "/#/legal",
+      "permanent": false
     },
     {
       "source": "/markets/:id",
-      "destination": "/index.html"
+      "destination": "/#/markets/:id",
+      "permanent": false
     }
   ]
 }
